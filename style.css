@@ -1,0 +1,118 @@
+:root {
+    --bg-color: #fcf8f2;
+    --text-color: #2c1a11;
+    --card-bg: #ffffff;
+    --header-bg: #8c6239;
+    --header-text: #ffffff;
+    --accent-color: #e67e22;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme {
+    --bg-color: #1a120b;
+    --text-color: #f5ebe6;
+    --card-bg: #2c1e15;
+    --header-bg: #3d2516;
+    --header-text: #f5ebe6;
+    --accent-color: #f39c12;
+    --shadow-color: rgba(0, 0, 0, 0.4);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.btn-toggle {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-toggle:hover {
+    background-color: #d35400;
+    transform: scale(1.05);
+}
+
+.recipe-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.recipe-card {
+    background-color: var(--card-bg);
+    max-width: 500px;
+    width: 100%;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    transition: background-color 0.3s;
+}
+
+.recipe-card h2 {
+    margin-top: 0;
+    color: var(--accent-color);
+    text-align: center;
+}
+
+.recipe-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    margin: 15px 0;
+}
+
+.recipe-description {
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.ingredients ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.ingredients li {
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.site-footer {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
