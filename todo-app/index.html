@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список справ (To-Do List)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="todo-container">
+        <h1>Мій список справ</h1>
+        
+        <!-- Форма введення нового завдання -->
+        <div class="input-section">
+            <input type="text" id="todo-input" placeholder="Що потрібно зробити?" autocomplete="off">
+            <button id="add-btn">Додати</button>
+        </div>
+
+        <!-- Панель фільтрів та статистики (Додатковий бал) -->
+        <div class="controls-section">
+            <div class="counter" id="task-counter">Усього: 0 | Залишилось: 0</div>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Всі</button>
+                <button class="filter-btn" data-filter="active">Активні</button>
+                <button class="filter-btn" data-filter="completed">Виконані</button>
+            </div>
+            <button id="clear-completed-btn" class="clear-btn">Очистити виконані</button>
+        </div>
+
+        <!-- Контейнер для списку завдань -->
+        <ul id="todo-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
